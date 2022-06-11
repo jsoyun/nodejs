@@ -1,6 +1,8 @@
 // const express = require("express");
 // const router = express.Router()
-// const app = express();
+const app = express();
+const indexRouter = require("./routes/index");
+app.use("/", indexRouter);
 
 const http = require("http");
 const hostname = "127.0.0.1";
