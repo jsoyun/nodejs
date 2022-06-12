@@ -1,19 +1,21 @@
-// const express = require("express");
+const express = require("express");
 // const router = express.Router()
 const app = express();
+
 const indexRouter = require("./routes/index");
+
 app.use("/", indexRouter);
 
-const http = require("http");
-const hostname = "127.0.0.1";
+// const http = require("http");
+// const hostname = "127.0.0.1";
 const port = 3000;
 
-const server = http.createServer(function (req, res) {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("hello world");
-});
+// const server = http.createServer(function (req, res) {
+//   res.statusCode = 200;
+//   res.setHeader("Content-Type", "text/plain");
+//   res.end("hello world");
+// });
 
-server.listen(port, hostname, function () {
-  console.log(`server 연결됨 ${hostname}:${port}`);
+app.listen(port, function () {
+  console.log("여기만");
 });
